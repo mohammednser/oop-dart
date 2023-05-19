@@ -10,9 +10,24 @@ enum CoffeeSize{
 class CoffeeMachine {
  // List coffeeSize = [1, 2, 3, 4];
  //final coffee = 1;
-   double _waterLevel = 0; // milli letter
-   double _coffeeLevel = 0; // gram
-    
+   var _waterLevel ; // milli letter
+   late double _coffeeLevel ; // gram
+      
+      CoffeeMachine({ waterLevel , coffeeLevel}){
+        if (waterLevel !=null) {
+          _waterLevel = waterLevel;
+        }else {
+          waterLevel = 0;
+        }
+        if (coffeeLevel !=null) {
+            _coffeeLevel = coffeeLevel;
+
+        } else {
+          coffeeLevel = 0;
+        }
+      }
+
+
    double get waterLevel{
     return _waterLevel;
    }
